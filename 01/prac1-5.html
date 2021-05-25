@@ -12,8 +12,16 @@
         function runButtonPressed() {
             var numbers = [];
             //prac1-5〜 1から10までの数を順に10個挿入する
+            for (var i = 0; i < 10; i++) {
+                var num = i + 1;
+                numbers.push(num);
+            }
             show(numbers);
             //prac1-5 全ての要素に10を足す
+            for (var i = 0; i < 10; i++) {
+                var num = i + 1;
+                numbers[i] = num + 10;
+            }
             //prac1-6 全ての要素に10をかける
             show(numbers);
         }
