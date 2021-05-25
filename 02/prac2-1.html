@@ -14,10 +14,10 @@
             var numbers = [];
             for (var i = 0; i < 10; i++) {
                 numbers[i] = i + 1
-                tmp = numbers[1];
-                numbers[1] = numbers[3];
-                numbers[3] = tmp;
             }
+            tmp = numbers[1];
+            numbers[1] = numbers[3];
+            numbers[3] = tmp;
             show(numbers);
             //prac2-2 10個の順数を生成し，n番目とm番目を入れ替える
             //(nとmは乱数にて決定する)
