@@ -11,17 +11,26 @@
     <script>
         function runButtonPressed() {
             //prac3-1 10個の乱数の合計を求める（繰り返しで）
-            var sum = 0;
+
             var numbers = [];
-            for (var i = 0; i < 10; i++) {
-                var n = Math.floor(Math.random() * 11);
-                numbers[i] = n;
-                sum = sum + n;
-            }
+            createRandomNumbers(numbers, 10);
             show(numbers);
-            document.getElementById('res').innerHTML = sum;
 
+            var sum = 0;
+            for (var i = 0; i < 10; i++) {
+                sum = sum + numbers[i];
+            }
 
+            show(sum);
+            // var sum = 0;
+            // var numbers = [];
+            // for (var i = 0; i < 10; i++) {
+            //     var n = Math.floor(Math.random() * 11);
+            //     numbers[i] = n;
+            //     sum = sum + n;
+            // }
+            // show(numbers);
+            // show(sum);
 
 
             //prac3-2 10個の乱数の平均を求める
