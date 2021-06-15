@@ -10,12 +10,12 @@
 
     <script>
         function runButtonPressed() {
-            var numbers = [];
-            numbers.push(13);
-            numbers.push(8);
-            numbers.push(21);
-            numbers.push(5);
-            show(numbers);
+            var text = document.getElementById('tf1').value;
+            show(text);
+            var chars = text.split('');
+            show(chars);
+            var text2 = chars.join('');
+            show(text2);
         }
 
     </script>
@@ -23,7 +23,8 @@
 </head>
 
 <body>
-    <h1>ex1-1</h1>
+    <h1>split</h1>
+    <input id="tf1" type="text" value="こんにちは">
     <button onclick="runButtonPressed()">run!</button>
     <p id="res"></p>
 </body>

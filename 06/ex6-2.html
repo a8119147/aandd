@@ -10,20 +10,26 @@
 
     <script>
         function runButtonPressed() {
-            var numbers = [];
-            numbers.push(13);
-            numbers.push(8);
-            numbers.push(21);
-            numbers.push(5);
-            show(numbers);
-        }
+            var stack = [];
 
+            stack.push('りんご');
+            stack.push('みかん');
+            stack.push('ばなな');
+
+            show(stack);
+
+            show(stack.pop());
+            show(stack.pop());
+            show(stack.pop());
+
+            show(stack);
+        }
     </script>
 
 </head>
 
 <body>
-    <h1>ex1-1</h1>
+    <h1>スタック</h1>
     <button onclick="runButtonPressed()">run!</button>
     <p id="res"></p>
 </body>

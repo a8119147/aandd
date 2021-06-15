@@ -11,19 +11,21 @@
     <script>
         function runButtonPressed() {
             var numbers = [];
-            numbers.push(13);
-            numbers.push(8);
-            numbers.push(21);
-            numbers.push(5);
-            show(numbers);
+            createOrderedRandomNumbers(numbers, 100);
+            var startTime = new Date();
+            //処理            
+            //ここに，並び替えのプログラムを書く
+            //処理終わり
+            var endTime = new Date();
+            var time = endTime - startTime;
+            show(time + 'ミリ秒');
         }
-
     </script>
 
 </head>
 
 <body>
-    <h1>ex1-1</h1>
+    <h1>時間の測定</h1>
     <button onclick="runButtonPressed()">run!</button>
     <p id="res"></p>
 </body>
