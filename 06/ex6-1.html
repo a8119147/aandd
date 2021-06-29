@@ -14,7 +14,13 @@
             show(text);
             var chars = text.split('');
             show(chars);
-            var text2 = chars.join('');
+
+            var stack = [];
+            for (var i = 0; i = chars.length; i++) {
+                stack.push(chars.pop());
+            }
+            show(stack);
+            var text2 = stack.join('');
             show(text2);
         }
 
@@ -23,7 +29,7 @@
 </head>
 
 <body>
-    <h1>split</h1>
+    <h1>反転さん☆</h1>
     <input id="tf1" type="text" value="こんにちは">
     <button onclick="runButtonPressed()">run!</button>
     <p id="res"></p>
