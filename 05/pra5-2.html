@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var numbers = [];
+            createRandomNumbers(numbers, 10);
+            show(numbers);
+
+            var address = 0;
+            var min_index = 0;
+
+            for (var j = 0; j < 10; j++) {
+                address = numbers[j];
+                min_index = j;
+                for (var i = j + 1; i < 10; i++) {
+                    if (numbers[min_index] > numbers[i]) {
+                        min_index = i;
+
+                    }
+                    console.log(min_index, i, 5555)
+                }
+
+                console.log(11111);
+                console.log(numbers[j], numbers[min_index], address);
+                numbers[j] = numbers[min_index];
+                numbers[min_index] = address;
+                show(numbers);
+            }
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>prac5-2</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>

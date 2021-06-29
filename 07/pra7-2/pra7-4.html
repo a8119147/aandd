@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var word = {};
+
+        function runButtonPressed() {
+            var send = document.getElementById('tf1').value;
+            var com = word[send];
+            if (com == null) {
+                document.getElementById('tf2').value = 'わかりません☆';
+            } else {
+                document.getElementById('tf2').value = com;
+
+            }
+        }
+        function runButton2Pressed() {
+            var send = document.getElementById('tf1').value;
+            var reply = document.getElementById('tf3').value;
+            word[send] = reply;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Botシステム</h1>
+    あなた：<input id="tf1" type="text" value="">
+    <button onclick="runButtonPressed()">検索!</button>
+    <br>
+    コンピュータ：<input id="tf2" type="text" value="">
+    <h1>教える！</h1>
+    返信: <input id="tf3" type="text" value="">
+    <button onclick="runButton2Pressed()">teach!</button>
+
+    <p id="res"></p>
+</body>
+
+</html>

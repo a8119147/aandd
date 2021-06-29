@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var profile = {};
+
+        function registerButtonPressed() {
+            var name = document.getElementById('tf1').value;
+            var birthday = document.getElementById('tf2').value;
+            profile[name] = birthday;
+            profile[birthday] = name;
+        }
+
+        function runButtonPressed() {
+            var text1 = document.getElementById('tf3').value;
+            var text2 = profile[text1];
+            if (text2 == undefined) {
+                document.getElementById('tf4').value = '見つかりませんでした';
+            } else {
+                document.getElementById('tf4').value = text2;
+
+            }
+        }
+        function runButton2Pressed() {
+            var text1 = document.getElementById('tf5').value;
+            var text2 = profile[text1];
+            if (text2 == undefined) {
+                document.getElementById('tf6').value = '見つかりませんでした';
+            } else {
+                document.getElementById('tf6').value = text2;
+
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>登録</h1>
+    名前：<input id="tf1" type="text" value="">
+    <br>
+    誕生日：<input id="tf2" type="text" value="">
+    <button onclick="registerButtonPressed()">登録!</button>
+    <h1>名前検索</h1>
+    名前は？<input id="tf3" type="text" value="">
+    <button onclick="runButtonPressed()">検索!</button>
+    <br>
+    誕生日➡️<input id="tf4" type="text" value="">
+    <h1>誕生日検索</h1>
+    誕生日は？<input id="tf5" type="text" value="">
+    <button onclick="runButton2Pressed()">検索!</button>
+    <br>
+    名前➡️<input id="tf6" type="text" value="">
+    <p id="res"></p>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var text = document.getElementById('tf1').value;
+            show(text);
+            var chars = text.split('');
+            show(chars);
+            console.log(chars[0]);
+
+            var stack = [];
+            for (var i = 0; i = chars.length; i++) {
+                stack.push(chars.pop());
+            }
+            show(stack);
+
+            var text2 = stack.join('');
+            show(text2);
+
+            if (text == text2) {
+                show('回文です⭕️')
+            } else {
+                show('回文ではありません❌')
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>回文判定さん☆</h1>
+    <input id="tf1" type="text" value="こんにちは">
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<head>
+    <meta http-equiv=“Content-Type” content=“text/html; charset=UTF-8">
+    <script type=“text/javascript” src=“../aandd.js”> </script> <script type=“text/javascript” src=“../jquery.min.js”>
+        </script> <script>
+            function runButtonPressed() {
+                //prac3-1 10個の乱数の合計を求める（繰り返しで）
+                var numbers = [];
+                createRandomNumbers(numbers, 10);
+                show(numbers);
+                var new_numbers = [];
+                for (var v = 0; v < 10; v++) {
+                    new_numbers[v] = numbers[v] + 2;
+                }
+                show(new_numbers)
+            }
+        </script>
+</head>
+
+<body>
+    <h1>prac4-1 : +2する</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>

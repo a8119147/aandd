@@ -1,0 +1,28 @@
+<head>
+    <meta http-equiv=“Content-Type” content=“text/html; charset=UTF-8">
+    <script type=“text/javascript” src=“../aandd.js”> </script> <script type=“text/javascript” src=“../jquery.min.js”>
+        </script> <script>
+            function runButtonPressed() {
+                //prac3-1 10個の乱数の合計を求める（繰り返しで）
+                var numbers = [];
+                createRandomNumbers(numbers, 10);
+                show(numbers);
+                var up3_numbers = [];
+                for (var v = 0; v < 10; v++) {
+                    if (numbers[v] >= 3) {
+                        ad_up3 = numbers[v];
+                        up3_numbers.push(ad_up3)
+                    }
+                }
+                show(up3_numbers)
+            }
+        </script>
+</head>
+
+<body>
+    <h1>prac4-2 : ３以上のラインナップ</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+</html>

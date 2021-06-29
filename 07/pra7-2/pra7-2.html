@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var fruits = {};
+
+        $().ready(function () {
+            fruits['apple'] = 'りんご';
+            fruits['りんご'] = 'apple';
+            fruits['orange'] = 'みかん';
+            fruits['みかん'] = 'orange';
+        });
+
+        function registerButtonPressed() {
+            var eng = document.getElementById('tf3').value;
+            var jpn = document.getElementById('tf4').value;
+            fruits[eng] = jpn;
+            fruits[jpn] = eng;
+        }
+
+        function runButtonPressed() {
+            var text1 = document.getElementById('tf1').value;
+            var text2 = fruits[text1];
+            document.getElementById('tf2').value = text2;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>登録</h1>
+    英語：<input id="tf3" type="text" value="">
+    <br>
+    日本語：<input id="tf4" type="text" value="">
+    <button onclick="registerButtonPressed()">登録!</button>
+    <h1>検索</h1>
+    <input id="tf1" type="text" value="">
+    <button onclick="runButtonPressed()">検索!</button>
+    <br>
+    <input id="tf2" type="text" value="">
+    <p id="res"></p>
+</body>
+
+</html>
