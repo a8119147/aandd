@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        var fruits = {};
+
+        $().ready(function () {
+            fruits['apple'] = 'りんご';
+            fruits['orange'] = 'みかん';
+        });
+
+        function saveButtonPressed() {
+            localStorage.setItem('ObjectX', fruits);
+        }
+
+        function loadButtonPressed() {
+            var loaded = localStorage.getItem('ObjectX');
+            console.log(loaded);
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>save and load</h1>
+    <button onclick="saveButtonPressed()">save!</button>
+    <button onclick="loadButtonPressed()">load!</button>
+    <p id="res"></p>
+</body>
+
+</html>
